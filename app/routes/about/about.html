@@ -1,0 +1,64 @@
+<section class='about_main_container'>
+
+    <div class='words'>
+        <h2 id='about_heading'>About This Website</h2>
+        <br><br>
+
+        <div class='about_info'>
+
+            <!--This box only shows up if someone clicks on one
+            of the technologies in the list-->
+            <div class='tech_box' ng-show='showTechBox'>
+                <h5>Info</h5>
+                <br>
+                <div class='exit_button' ng-click='exitTechBox()'>X</div>
+                <div class='tech_info'>{{ techInfo }}</div>
+            </div>
+
+            <h4>Why Cats?</h4>
+            <p>
+            Cats are hilarious! And adorable and relatable. 
+            Who hasn't watched a funny cat video at some
+            point? 
+            </p>
+
+            <h4>The Tech</h4>
+            <p>
+            This website uses a lot of current, in demand 
+            technologies, including:
+                <ul>
+                    <li ng-click='getTech("responsive")'>- Fully Responsive, Mobile First Design</li>
+                    <li ng-click='getTech("gulp")'>- Gulp</li>
+                    <li ng-click='getTech("scss")'>- SCSS</li>
+                    <li ng-click='getTech("babel")'>- Babel</li>
+                    <li ng-click='getTech("animations")'>- Css Animations on the Nav bar</li>
+                    <li ng-click='getTech("html")'>- HTML</li>
+                    <li ng-click='getTech("js")'>- Javascript (ES5 & ES6)</li>
+                    <li ng-click='getTech("angular")'>- Angular:</li>
+                </ul>
+                <ul class='indented_list'>
+                    <li ng-click='getTech("api")'>- 2 RESTful API calls</li>
+                    <li ng-click='getTech("routing")'>- UI-routing with multiple views</li>
+                    <li ng-click='getTech("directive")'>- Custom Angular Directive</li>
+                </ul>
+                   
+            </p>
+
+            <h4>About Me</h4>
+            <p>
+            I am a talented, passionate developer with an eye for 
+            design, and a love of coding! I'm always eager to learn
+            new technologies and I excel in fast-paced, team-oriented
+            environments.
+            </p>
+            <br><br><br>
+            <p id='copyright'>&copy Loren Pabst 2017</p>
+            
+        </div>
+
+        <div class='about_pic'></div>
+
+    </div>
+
+    
+</section>

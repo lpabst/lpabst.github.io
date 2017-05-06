@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.mobile_header {
+  width: 100%;
+  height: 80px;
+  position: relative; }
+
+.ham {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightgray;
+  padding-top: 13px;
+  position: absolute;
+  top: 15px;
+  left: 22px;
+  cursor: pointer;
+  z-index: 105; }
+
+.line {
+  width: 24px;
+  height: 2px;
+  background: black;
+  margin: 4px auto; }
+
+.cross {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightgray;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 14px;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  left: 22px;
+  cursor: pointer;
+  z-index: 105; }
+
+.mobileMenu {
+  width: 200px;
+  height: 320px;
+  background: #eee;
+  position: absolute;
+  z-index: 100; }
+
+.mobile_nav {
+  width: 100%;
+  position: absolute;
+  top: 90px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  padding-bottom: 10px; }
+
+.mobile_nav li {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: font-size 0.2s;
+  -webkit-transition: background 0.2s; }
+
+.mobile_nav li:hover {
+  font-size: 20px;
+  background: #fff; }
+
+.desktop_header {
+  width: 100%;
+  height: 80px;
+  display: none;
+  position: relative; }
+
+.desktop_nav {
+  min-width: 40%;
+  position: absolute;
+  right: 2%;
+  display: flex;
+  justify-content: space-around;
+  line-height: 80px; }
+
+.desktop_nav li {
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0px 32px;
+  -webkit-transition: font-size 0.2s;
+  -webkit-transition: background 0.2s; }
+
+.desktop_nav li:hover {
+  font-size: 24px;
+  background: #eee; }
+
+@media (min-width: 500px) {
+  .mobileMenu {
+    width: 350px;
+    height: 220px; }
+  .mobile_nav {
+    top: 20px;
+    line-height: 42px; } }
+
+@media (min-width: 700px) {
+  .mobile_header {
+    display: none; }
+  .desktop_header {
+    display: block; } }
+
+.about_main_container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: linear-gradient(gray, #d4fced, gray);
+  position: relative;
+  overflow: scroll; }
+  .about_main_container h4 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold; }
+  .about_main_container p {
+    padding-top: 10px;
+    width: 90%; }
+  .about_main_container li {
+    padding-top: 8px; }
+
+#about_heading {
+  padding-top: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: underline; }
+
+.about_info {
+  width: 90%;
+  position: absolute;
+  left: 5%; }
+  .about_info li {
+    cursor: pointer; }
+  @media (min-width: 1200px) {
+    .about_info {
+      width: 50%; } }
+
+.tech_box {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 40px;
+  top: 20%;
+  font-size: 18px;
+  background: white;
+  box-shadow: 6px 6px 10px; }
+  @media (min-width: 700px) {
+    .tech_box {
+      width: 50%;
+      left: 25%;
+      top: 25%; } }
+  @media (min-width: 1200px) {
+    .tech_box {
+      left: 40%; } }
+  .tech_box .exit_button {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer; }
+  .tech_box .tech_info {
+    width: 92%;
+    position: absolute;
+    top: 50px;
+    left: 2%; }
+  .tech_box h5 {
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 5px;
+    font-weight: bold; }
+
+.indented_list {
+  padding-left: 15px; }
+
+.about_pic {
+  width: 35%;
+  height: 60%;
+  position: absolute;
+  right: 5%;
+  top: 100px;
+  background: url("./img/headshot-devmtn.jpg") no-repeat center;
+  background-size: cover;
+  display: none; }
+  @media (min-width: 1200px) {
+    .about_pic {
+      display: block; } }
+
+#copyright {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px; }
+  @media (min-width: 1200px) {
+    #copyright {
+      text-align: right; } }
+
+.search_main_container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background: url("../img/simba.jpg") left no-repeat;
+  background-size: cover;
+  overflow: scroll; }
+
+.input_form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5; }
+
+.movie_info {
+  width: 80%;
+  position: absolute;
+  top: 85px;
+  left: 10%;
+  background: white;
+  font-weight: bold;
+  padding: 5px 5px;
+  box-shadow: 7px 7px 8px #222;
+  line-height: 25px; }
+
+.movie_info li {
+  width: 60%;
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer; }
+
+.movie_info h4 {
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem; }
+
+@media (min-width: 700px) {
+  .movie_info {
+    width: 40%;
+    left: 30%; } }
+
+.test {
+  width: 100%;
+  height: 50px;
+  background: red;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer; }
+
+.yellow {
+  background: #f4cb42; }
+
+.quotes_main_section {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: url("./img/jedicats.jpeg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: scroll; }
+
+.quote_box {
+  width: 60%;
+  min-height: 20%;
+  background: rgba(100, 100, 150, 0.4);
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  font-size: 24px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 20px; }
+  @media (min-width: 700px) {
+    .quote_box {
+      width: 40%;
+      left: 30%; } }
+
+.quotes_cr {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px; }
+
+.info_main_container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background: url("../img/epicCats.jpg") left no-repeat;
+  background-size: cover;
+  overflow: scroll; }
+
+.info_input_form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5; }
+
+.movie_stats {
+  width: 80%;
+  position: absolute;
+  top: 85px;
+  left: 10%;
+  background: white;
+  font-weight: bold;
+  padding: 5px 5px;
+  box-shadow: 7px 7px 8px #222;
+  line-height: 25px; }
+  @media (min-width: 700px) {
+    .movie_stats {
+      width: 40%;
+      left: 30%; } }

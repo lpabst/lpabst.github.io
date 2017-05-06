@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Cats</title>
+  <link href="https://fonts.googleapis.com/css?family=Ranga|Timmana|Love+Ya+Like+A+Sister" rel="stylesheet">
+  <link rel="stylesheet" href="bundle.css">
+</head>
+
+<!--Start of Body-->
+<body>
+<!--Start of Body-->
+
+<header class='mobile_header' ng-controller='mainCtrl'>
+  <div class='ham' ng-click='showMobileMenu()' ng-hide='mobileMenu'>
+    <div class='line'></div>
+    <div class='line'></div>
+    <div class='line'></div>
+  </div>
+
+  <div class='cross' ng-click='showMobileMenu()' ng-show='mobileMenu'>X</div>
+
+  <section class='mobileMenu' ng-if='mobileMenu'>
+    <ul class='mobile_nav'>
+      <a ui-sref='movieSearch'>
+        <li ng-click='showMobileMenu()'>Search</li>
+      </a>
+      <a ui-sref='specificMovie'>
+        <li ng-click='showMobileMenu()'>Info</li>
+      </a>
+      <a ui-sref='movieQuotes'>
+        <li ng-click='showMobileMenu()'>Quotes</li>
+      </a>
+      <a ui-sref='about'>
+        <li ng-click='showMobileMenu()'>About</li>
+      </a>
+    </ul>
+  </section>
+
+</header>
+   
+<header class='desktop_header'>
+  <ul class='desktop_nav'>
+    <a ui-sref='movieSearch'>
+      <li>Search</li>
+    </a>
+    |
+    <a ui-sref='specificMovie'>
+      <li>Info</li>
+    </a>
+    |
+    <a ui-sref='movieQuotes'>
+      <li>Quotes</li>
+    </a>
+    |
+    <a ui-sref='about'>
+      <li>About</li>
+    </a>
+  </ul>
+</header>
+
+
+
+
+
+
+
+<ui-view>
+  <!--Content here-->
+</ui-view>
+
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js'></script>
+<script src="bundle.js"></script>
+
+</body>
+</html>
+

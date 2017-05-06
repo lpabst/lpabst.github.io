@@ -1,0 +1,25 @@
+
+
+<section class='search_main_container'>
+
+  <div class='input_form'>
+    <form ng-submit="searchMovie(movie_name)">
+      <input type='text' ng-model='movie_name' placeholder='Search Movies By Title'>
+      <span><button ng-click='searchMovie(movie_name)'>Submit</button></span>
+    </form>
+  </div>
+
+  <div class='movie_info' ng-show='hasContent'>
+    <h4 ng-hide='error'>Most Recent Movie(s) By That Title</h4>
+    <br>
+    <ul>
+      <li highlight-dir ng-repeat='movie in movies | orderBy: "-Year"'>
+        <hr>
+        {{movie.Year}}, {{ movie.Title }}
+      </li>
+    </ul> 
+  </div>
+
+
+
+</section>
