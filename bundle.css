@@ -142,6 +142,16 @@ a {
   font-size: 24px;
   background: #eee; }
 
+#box {
+  width: 280px;
+  height: 50px;
+  background: lightblue;
+  position: absolute;
+  bottom: 25px;
+  right: 35px;
+  font-weight: bold;
+  font-size: 18px; }
+
 @media (min-width: 500px) {
   .mobileMenu {
     width: 350px;
@@ -250,57 +260,6 @@ a {
     #copyright {
       text-align: right; } }
 
-.search_main_container {
-  width: 100%;
-  min-height: calc(100vh - 80px);
-  position: relative;
-  background: url("../img/simba.jpg") left no-repeat;
-  background-size: cover;
-  overflow: scroll; }
-
-.input_form {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 5; }
-
-.movie_info {
-  width: 80%;
-  position: absolute;
-  top: 85px;
-  left: 10%;
-  background: white;
-  font-weight: bold;
-  padding: 5px 5px;
-  box-shadow: 7px 7px 8px #222;
-  line-height: 25px; }
-
-.movie_info li {
-  width: 60%;
-  font-family: 'Timmana', sans-serif;
-  font-size: 1.2rem;
-  cursor: pointer; }
-
-.movie_info h4 {
-  font-family: 'Timmana', sans-serif;
-  font-size: 1.2rem; }
-
-@media (min-width: 700px) {
-  .movie_info {
-    width: 40%;
-    left: 30%; } }
-
-.test {
-  width: 100%;
-  height: 50px;
-  background: red;
-  position: absolute;
-  bottom: 20px;
-  cursor: pointer; }
-
-.yellow {
-  background: #f4cb42; }
-
 .quotes_main_section {
   width: 100%;
   height: calc(100vh - 80px);
@@ -360,3 +319,54 @@ a {
     .movie_stats {
       width: 40%;
       left: 30%; } }
+
+.search_main_container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background: url("../img/simba.jpg") left no-repeat;
+  background-size: cover;
+  overflow: scroll; }
+
+.input_form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5; }
+
+.movie_info {
+  width: 80%;
+  position: absolute;
+  top: 85px;
+  left: 10%;
+  background: white;
+  font-weight: bold;
+  padding: 5px 5px;
+  box-shadow: 7px 7px 8px #222;
+  line-height: 25px; }
+
+.movie_info li {
+  width: 60%;
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer; }
+
+.movie_info h4 {
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem; }
+
+@media (min-width: 700px) {
+  .movie_info {
+    width: 40%;
+    left: 30%; } }
+
+.test {
+  width: 100%;
+  height: 50px;
+  background: red;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer; }
+
+.yellow {
+  background: #f4cb42; }
