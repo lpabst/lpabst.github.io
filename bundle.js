@@ -62,12 +62,12 @@ angular.module('myApp').service('movieService', ["$http", function ($http) {
 
     this.searchMovie = function (movie_name) {
         var search = movie_name.split(' ').join('+');
-        return $http.get('http://www.omdbapi.com/?s=' + search);
+        return $http.get('https://www.omdbapi.com/?s=' + search);
     };
 
     this.showSpecificMovie = function (movie_name) {
         var search = movie_name.split(' ').join('+');
-        return $http.get('http://www.omdbapi.com/?t=' + search);
+        return $http.get('https://www.omdbapi.com/?t=' + search);
     };
 }]);
 'use strict';
@@ -83,6 +83,73 @@ angular.module('myApp').directive('highlightDir', function () {
         }
     };
 });
+'use strict';
+
+angular.module('myApp').controller('movieSearchCtrl', ["$scope", "movieService", function ($scope, movieService) {
+
+  $scope.hasContent = false;
+  $scope.error = false;
+
+  $scope.searchMovie = function (movie_name) {
+    movieService.searchMovie(movie_name).then(function (response) {
+      if (response.data.Response === "True") {
+        $scope.movies = response.data.Search;
+        $scope.hasContent = true;
+        $scope.error = false;
+      } else {
+        $scope.movies = [{
+          Title: 'no movies found by this title. Your search may have an error/typo, please try again.',
+          Year: "Error"
+        }];
+        $scope.hasContent = true;
+        $scope.error = true;
+      }
+      $scope.movie_name = '';
+    });
+  };
+}]);
+'use strict';
+
+angular.module('myApp').controller('quotesCtrl', ["$scope", "quotesService", function ($scope, quotesService) {
+
+    $scope.getQuote = function () {
+        quotesService.getQuote().then(function (response) {
+            var res = response.data.contents.quotes[0];
+            $scope.quote = res.quote;
+            $scope.author = res.author;
+            $scope.copyright = response.data.contents.copyright;
+        });
+    };
+
+    $scope.getQuote();
+}]);
+'use strict';
+
+angular.module('myApp').service('quotesService', ["$http", function ($http) {
+
+    this.getQuote = function () {
+        return $http.get('https://quotes.rest/qod.json');
+    };
+}]);
+'use strict';
+
+angular.module('myApp').controller('specificMovieCtrl', ["$scope", "movieService", function ($scope, movieService) {
+
+    $scope.movieHasBeenSearched = false;
+
+    $scope.showSpecificMovie = function (movie_name) {
+
+        movieService.showSpecificMovie(movie_name).then(function (response) {
+            $scope.title = response.data.Title;
+            $scope.rating = response.data.Rated;
+            $scope.runtime = response.data.Runtime;
+            $scope.revenue = response.data.BoxOffice;
+            $scope.reviewRating = response.data.imdbRating;
+            $scope.searchByName = '';
+            $scope.movieHasBeenSearched = true;
+        });
+    };
+}]);
 'use strict';
 
 angular.module('myApp').controller('aboutCtrl', ["$scope", "aboutService", function ($scope, aboutService) {
@@ -121,70 +188,3 @@ angular.module('myApp').service('aboutService', function () {
         return techList[tech];
     };
 });
-'use strict';
-
-angular.module('myApp').controller('movieSearchCtrl', ["$scope", "movieService", function ($scope, movieService) {
-
-  $scope.hasContent = false;
-  $scope.error = false;
-
-  $scope.searchMovie = function (movie_name) {
-    movieService.searchMovie(movie_name).then(function (response) {
-      if (response.data.Response === "True") {
-        $scope.movies = response.data.Search;
-        $scope.hasContent = true;
-        $scope.error = false;
-      } else {
-        $scope.movies = [{
-          Title: 'no movies found by this title. Your search may have an error/typo, please try again.',
-          Year: "Error"
-        }];
-        $scope.hasContent = true;
-        $scope.error = true;
-      }
-      $scope.movie_name = '';
-    });
-  };
-}]);
-'use strict';
-
-angular.module('myApp').controller('specificMovieCtrl', ["$scope", "movieService", function ($scope, movieService) {
-
-    $scope.movieHasBeenSearched = false;
-
-    $scope.showSpecificMovie = function (movie_name) {
-
-        movieService.showSpecificMovie(movie_name).then(function (response) {
-            $scope.title = response.data.Title;
-            $scope.rating = response.data.Rated;
-            $scope.runtime = response.data.Runtime;
-            $scope.revenue = response.data.BoxOffice;
-            $scope.reviewRating = response.data.imdbRating;
-            $scope.searchByName = '';
-            $scope.movieHasBeenSearched = true;
-        });
-    };
-}]);
-'use strict';
-
-angular.module('myApp').controller('quotesCtrl', ["$scope", "quotesService", function ($scope, quotesService) {
-
-    $scope.getQuote = function () {
-        quotesService.getQuote().then(function (response) {
-            var res = response.data.contents.quotes[0];
-            $scope.quote = res.quote;
-            $scope.author = res.author;
-            $scope.copyright = response.data.contents.copyright;
-        });
-    };
-
-    $scope.getQuote();
-}]);
-'use strict';
-
-angular.module('myApp').service('quotesService', ["$http", function ($http) {
-
-    this.getQuote = function () {
-        return $http.get('http://quotes.rest/qod.json');
-    };
-}]);

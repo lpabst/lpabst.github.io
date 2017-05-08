@@ -166,6 +166,117 @@ a {
   .desktop_header {
     display: block; } }
 
+.search_main_container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background: url("../img/simba.jpg") left no-repeat;
+  background-size: cover;
+  overflow: scroll; }
+
+.input_form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5; }
+
+.movie_info {
+  width: 80%;
+  position: absolute;
+  top: 85px;
+  left: 10%;
+  background: white;
+  font-weight: bold;
+  padding: 5px 5px;
+  box-shadow: 7px 7px 8px #222;
+  line-height: 25px; }
+
+.movie_info li {
+  width: 60%;
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer; }
+
+.movie_info h4 {
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.2rem; }
+
+@media (min-width: 700px) {
+  .movie_info {
+    width: 40%;
+    left: 30%; } }
+
+.test {
+  width: 100%;
+  height: 50px;
+  background: red;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer; }
+
+.yellow {
+  background: #f4cb42; }
+
+.quotes_main_section {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: url("./img/jedicats.jpeg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: scroll; }
+
+.quote_box {
+  width: 60%;
+  min-height: 20%;
+  background: rgba(100, 100, 150, 0.4);
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  font-size: 24px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 20px; }
+  @media (min-width: 700px) {
+    .quote_box {
+      width: 40%;
+      left: 30%; } }
+
+.quotes_cr {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px; }
+
+.info_main_container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background: url("../img/epicCats.jpg") left no-repeat;
+  background-size: cover;
+  overflow: scroll; }
+
+.info_input_form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5; }
+
+.movie_stats {
+  width: 80%;
+  position: absolute;
+  top: 85px;
+  left: 10%;
+  background: white;
+  font-weight: bold;
+  padding: 5px 5px;
+  box-shadow: 7px 7px 8px #222;
+  line-height: 25px; }
+  @media (min-width: 700px) {
+    .movie_stats {
+      width: 40%;
+      left: 30%; } }
+
 .about_main_container {
   width: 100%;
   height: calc(100vh - 80px);
@@ -259,114 +370,3 @@ a {
   @media (min-width: 1200px) {
     #copyright {
       text-align: right; } }
-
-.quotes_main_section {
-  width: 100%;
-  height: calc(100vh - 80px);
-  background: url("./img/jedicats.jpeg") center no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: scroll; }
-
-.quote_box {
-  width: 60%;
-  min-height: 20%;
-  background: rgba(100, 100, 150, 0.4);
-  position: absolute;
-  left: 20%;
-  top: 35%;
-  font-size: 24px;
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-weight: bold;
-  text-align: center;
-  padding: 20px 20px; }
-  @media (min-width: 700px) {
-    .quote_box {
-      width: 40%;
-      left: 30%; } }
-
-.quotes_cr {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px; }
-
-.info_main_container {
-  width: 100%;
-  min-height: calc(100vh - 80px);
-  position: relative;
-  background: url("../img/epicCats.jpg") left no-repeat;
-  background-size: cover;
-  overflow: scroll; }
-
-.info_input_form {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 5; }
-
-.movie_stats {
-  width: 80%;
-  position: absolute;
-  top: 85px;
-  left: 10%;
-  background: white;
-  font-weight: bold;
-  padding: 5px 5px;
-  box-shadow: 7px 7px 8px #222;
-  line-height: 25px; }
-  @media (min-width: 700px) {
-    .movie_stats {
-      width: 40%;
-      left: 30%; } }
-
-.search_main_container {
-  width: 100%;
-  min-height: calc(100vh - 80px);
-  position: relative;
-  background: url("../img/simba.jpg") left no-repeat;
-  background-size: cover;
-  overflow: scroll; }
-
-.input_form {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 5; }
-
-.movie_info {
-  width: 80%;
-  position: absolute;
-  top: 85px;
-  left: 10%;
-  background: white;
-  font-weight: bold;
-  padding: 5px 5px;
-  box-shadow: 7px 7px 8px #222;
-  line-height: 25px; }
-
-.movie_info li {
-  width: 60%;
-  font-family: 'Timmana', sans-serif;
-  font-size: 1.2rem;
-  cursor: pointer; }
-
-.movie_info h4 {
-  font-family: 'Timmana', sans-serif;
-  font-size: 1.2rem; }
-
-@media (min-width: 700px) {
-  .movie_info {
-    width: 40%;
-    left: 30%; } }
-
-.test {
-  width: 100%;
-  height: 50px;
-  background: red;
-  position: absolute;
-  bottom: 20px;
-  cursor: pointer; }
-
-.yellow {
-  background: #f4cb42; }
