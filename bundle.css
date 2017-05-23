@@ -166,6 +166,100 @@ a {
   .desktop_header {
     display: block; } }
 
+.about_main_container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: linear-gradient(gray, #d4fced, gray);
+  position: relative;
+  overflow: scroll; }
+  .about_main_container h4 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold; }
+  .about_main_container p {
+    padding-top: 10px;
+    width: 90%; }
+  .about_main_container li {
+    padding-top: 8px; }
+
+#about_heading {
+  padding-top: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: underline; }
+
+.about_info {
+  width: 90%;
+  position: absolute;
+  left: 5%; }
+  .about_info li {
+    cursor: pointer; }
+  @media (min-width: 1200px) {
+    .about_info {
+      width: 50%; } }
+
+.tech_box {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 40px;
+  top: 20%;
+  font-size: 18px;
+  background: white;
+  box-shadow: 6px 6px 10px; }
+  @media (min-width: 700px) {
+    .tech_box {
+      width: 50%;
+      left: 25%;
+      top: 25%; } }
+  @media (min-width: 1200px) {
+    .tech_box {
+      left: 40%; } }
+  .tech_box .exit_button {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer; }
+  .tech_box .tech_info {
+    width: 92%;
+    position: absolute;
+    top: 50px;
+    left: 2%; }
+  .tech_box h5 {
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 5px;
+    font-weight: bold; }
+
+.indented_list {
+  padding-left: 15px; }
+
+.about_pic {
+  width: 35%;
+  height: 60%;
+  position: absolute;
+  right: 5%;
+  top: 100px;
+  background: url("./img/headshot-devmtn.jpg") no-repeat center;
+  background-size: cover;
+  display: none; }
+  @media (min-width: 1200px) {
+    .about_pic {
+      display: block; } }
+
+#copyright {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px; }
+  @media (min-width: 1200px) {
+    #copyright {
+      text-align: right; } }
+
 .search_main_container {
   width: 100%;
   min-height: calc(100vh - 80px);
@@ -276,97 +370,3 @@ a {
     .movie_stats {
       width: 40%;
       left: 30%; } }
-
-.about_main_container {
-  width: 100%;
-  height: calc(100vh - 80px);
-  background: linear-gradient(gray, #d4fced, gray);
-  position: relative;
-  overflow: scroll; }
-  .about_main_container h4 {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold; }
-  .about_main_container p {
-    padding-top: 10px;
-    width: 90%; }
-  .about_main_container li {
-    padding-top: 8px; }
-
-#about_heading {
-  padding-top: 15px;
-  width: 100%;
-  text-align: center;
-  font-size: 26px;
-  font-weight: bold;
-  text-decoration: underline; }
-
-.about_info {
-  width: 90%;
-  position: absolute;
-  left: 5%; }
-  .about_info li {
-    cursor: pointer; }
-  @media (min-width: 1200px) {
-    .about_info {
-      width: 50%; } }
-
-.tech_box {
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  left: 40px;
-  top: 20%;
-  font-size: 18px;
-  background: white;
-  box-shadow: 6px 6px 10px; }
-  @media (min-width: 700px) {
-    .tech_box {
-      width: 50%;
-      left: 25%;
-      top: 25%; } }
-  @media (min-width: 1200px) {
-    .tech_box {
-      left: 40%; } }
-  .tech_box .exit_button {
-    position: absolute;
-    right: 12px;
-    top: 7px;
-    font-weight: bold;
-    font-size: 22px;
-    cursor: pointer; }
-  .tech_box .tech_info {
-    width: 92%;
-    position: absolute;
-    top: 50px;
-    left: 2%; }
-  .tech_box h5 {
-    text-align: center;
-    text-decoration: underline;
-    padding-top: 5px;
-    font-weight: bold; }
-
-.indented_list {
-  padding-left: 15px; }
-
-.about_pic {
-  width: 35%;
-  height: 60%;
-  position: absolute;
-  right: 5%;
-  top: 100px;
-  background: url("./img/headshot-devmtn.jpg") no-repeat center;
-  background-size: cover;
-  display: none; }
-  @media (min-width: 1200px) {
-    .about_pic {
-      display: block; } }
-
-#copyright {
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px; }
-  @media (min-width: 1200px) {
-    #copyright {
-      text-align: right; } }
